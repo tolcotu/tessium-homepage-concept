@@ -72,17 +72,7 @@ function App() {
         duration: 1.5,
         delay: 0.25,
         ease: "power2.out",
-        clearProps: "opacity",
-      });
-      gsap.to(".hero-sculpture", {
-        yPercent: 9,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".hero-artwork",
-          start: "top 65%",
-          end: "bottom top",
-          scrub: 1,
-        },
+        clearProps: "all",
       });
       gsap.utils.toArray<SVGPathElement>(".draw-path").forEach((path) => {
         const length = path.getTotalLength();
@@ -229,68 +219,69 @@ function App() {
             </span>
           </div>
           <div className="hero-artwork">
-            <div className="artwork-grid" aria-hidden="true" />
-            <img
-              className="hero-sculpture"
-              src={asset("signal-sculpture.png")}
-              alt="Three streams of silver filaments converge into the Tessium mark"
-              fetchPriority="high"
-              width="1984"
-              height="793"
-            />
-            <svg
-              className="hero-sculpture hero-traces"
-              viewBox="0 0 1984 793"
-              fill="none"
-              aria-hidden="true"
-            >
-              <defs>
-                <filter id="heroGlow">
-                  <feGaussianBlur stdDeviation="3" />
-                </filter>
-              </defs>
-              {[
-                "M455 89C690 240 930 323 1590 377",
-                "M365 378C715 357 1175 400 1590 377",
-                "M449 667C805 506 1090 404 1590 377",
-              ].map((path, index) => (
-                <g key={path}>
-                  <path
-                    d={path}
-                    className="hero-pulse"
-                    style={{ animationDelay: `${index * -2.3}s` }}
-                    stroke="#d8bfff"
-                    strokeWidth="5"
-                    strokeDasharray="60 1500"
-                    filter="url(#heroGlow)"
-                  />
-                  <path
-                    d={path}
-                    className="hero-pulse"
-                    style={{ animationDelay: `${index * -2.3}s` }}
-                    stroke="#f0e6ff"
-                    strokeWidth="1"
-                    strokeDasharray="28 1532"
-                  />
-                </g>
-              ))}
-            </svg>
-            <span className="art-label label-launches">
-              <i />
-              New markets
-            </span>
-            <span className="art-label label-trades">
-              <i />
-              Token activity
-            </span>
-            <span className="art-label label-wallets">
-              <i />
-              Wallet movements
-            </span>
-            <span className="art-label label-output">
-              <i />
-              Your next big idea
-            </span>
+            <div className="hero-signal">
+              <img
+                className="hero-sculpture"
+                src={asset("signal-sculpture.png")}
+                alt="Three streams of silver filaments converge into the Tessium mark"
+                fetchPriority="high"
+                width="1984"
+                height="793"
+              />
+              <svg
+                className="hero-sculpture hero-traces"
+                viewBox="0 0 1984 793"
+                fill="none"
+                aria-hidden="true"
+              >
+                <defs>
+                  <filter id="heroGlow">
+                    <feGaussianBlur stdDeviation="3" />
+                  </filter>
+                </defs>
+                {[
+                  "M455 89C690 240 930 323 1590 377",
+                  "M365 378C715 357 1175 400 1590 377",
+                  "M449 667C805 506 1090 404 1590 377",
+                ].map((path, index) => (
+                  <g key={path}>
+                    <path
+                      d={path}
+                      className="hero-pulse"
+                      style={{ animationDelay: `${index * -2.3}s` }}
+                      stroke="#d8bfff"
+                      strokeWidth="5"
+                      strokeDasharray="60 1500"
+                      filter="url(#heroGlow)"
+                    />
+                    <path
+                      d={path}
+                      className="hero-pulse"
+                      style={{ animationDelay: `${index * -2.3}s` }}
+                      stroke="#f0e6ff"
+                      strokeWidth="1"
+                      strokeDasharray="28 1532"
+                    />
+                  </g>
+                ))}
+              </svg>
+              <span className="art-label label-launches">
+                <i />
+                New markets
+              </span>
+              <span className="art-label label-trades">
+                <i />
+                Token activity
+              </span>
+              <span className="art-label label-wallets">
+                <i />
+                Wallet movements
+              </span>
+              <span className="art-label label-output">
+                <i />
+                Your next big idea
+              </span>
+            </div>
             <div className="artwork-caption">
               <a href="#streams" aria-label="Explore Tessium’s data streams">
                 <ArrowDown size={17} />

@@ -1,0 +1,214 @@
+/* Composition refinements. Hero coordinates share the artwork's aspect ratio,
+   so annotations stay attached to their streams at every desktop width. */
+.hero > .hero-intro {
+  padding-top: clamp(48px, 5.2vw, 76px);
+}
+.hero-intro .intro-link {
+  margin-bottom: 24px;
+}
+.hero-intro h1 {
+  font-size: clamp(48px, 5.35vw, 76px);
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+.hero-intro > p {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+.hero-intro .hero-actions {
+  margin-top: 28px;
+  gap: 12px;
+}
+.hero-intro .hero-footnote {
+  margin-top: 14px;
+  font-size: 11px;
+}
+.hero > .hero-artwork {
+  width: min(1360px, calc(100% - 48px));
+  height: auto;
+  margin-top: 24px;
+  padding-bottom: 48px;
+  overflow: visible;
+  background: transparent;
+}
+.hero-signal {
+  position: relative;
+  aspect-ratio: 1984 / 793;
+  isolation: isolate;
+  background: var(--bg);
+}
+.hero-signal .hero-sculpture {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  will-change: auto;
+}
+.hero-signal .art-label {
+  font-size: 11px;
+  line-height: 1.4;
+  padding: 8px 12px;
+  white-space: nowrap;
+  background: #101115e6;
+  border-color: #ffffff16;
+  color: #c4c2cb;
+  transform: translateY(-50%);
+}
+.hero-signal .art-label::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  left: 100%;
+  top: 50%;
+  background: linear-gradient(90deg, #b8a3ed42, #b8a3ed08);
+}
+.hero-signal .label-launches {
+  top: 12%;
+  left: auto;
+  right: 79%;
+}
+.hero-signal .label-trades {
+  top: 47.6%;
+  left: auto;
+  right: 83.5%;
+}
+.hero-signal .label-wallets {
+  top: 84%;
+  bottom: auto;
+  left: auto;
+  right: 79%;
+}
+.hero-signal .label-output {
+  top: 47.6%;
+  left: 84%;
+  right: auto;
+  color: #d5c6ee;
+  border-color: #b8a3ed30;
+}
+.hero-signal .label-output::after {
+  left: auto;
+  right: 100%;
+  background: linear-gradient(90deg, #b8a3ed08, #b8a3ed42);
+}
+.hero-artwork .artwork-caption {
+  bottom: 0;
+}
+.hero .venue-strip {
+  margin-top: 32px;
+  padding-block: 32px;
+}
+.quickstart-steps strong {
+  font-size: 14px;
+}
+.quickstart-steps p {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.outcome-card p {
+  line-height: 1.75;
+  max-width: 42ch;
+}
+@media (min-width: 851px) {
+  .section {
+    padding-block: 120px;
+  }
+  .streams-section {
+    padding-top: 112px;
+  }
+  .pricing-expanded {
+    padding-block: 64px 120px;
+  }
+  .outcome-compact > div:last-child {
+    padding: 32px;
+  }
+}
+@media (min-width: 621px) and (max-width: 1000px) {
+  .hero-signal .art-label {
+    font-size: 10px;
+    padding: 7px 9px;
+    gap: 6px;
+  }
+  .hero-signal .label-output {
+    left: 82%;
+  }
+}
+@media (max-width: 620px) {
+  .hero > .hero-intro {
+    padding: 48px 20px 0;
+  }
+  .hero-intro h1 {
+    font-size: clamp(29px, 8.25vw, 46px);
+    line-height: 1.12;
+    letter-spacing: -0.05em;
+  }
+  .hero-intro > p {
+    font-size: 14px;
+    max-width: 32ch;
+    margin-top: 20px;
+  }
+  .hero-intro .hero-actions {
+    gap: 4px;
+    margin-top: 24px;
+  }
+  .hero > .hero-artwork {
+    width: calc(100% - 32px);
+    margin-top: 32px;
+    padding-bottom: 44px;
+  }
+  .hero-signal {
+    aspect-ratio: auto;
+    height: clamp(235px, 60vw, 340px);
+  }
+  .hero-signal .hero-sculpture {
+    top: 36px;
+    left: -12%;
+    width: 124%;
+    height: auto;
+    aspect-ratio: 1984 / 793;
+  }
+  .hero .hero-signal .art-label {
+    display: flex;
+    top: 0;
+    bottom: auto;
+    padding: 6px 8px;
+    font-size: 10px;
+    gap: 5px;
+    transform: none;
+  }
+  .hero-signal .art-label::after {
+    display: none;
+  }
+  .hero .hero-signal .label-launches {
+    left: 0;
+    right: auto;
+  }
+  .hero .hero-signal .label-trades {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  .hero .hero-signal .label-wallets {
+    left: auto;
+    right: 0;
+  }
+  .hero .hero-signal .label-output {
+    top: auto;
+    bottom: 8px;
+    left: auto;
+    right: 4%;
+  }
+  .hero .venue-strip {
+    margin-top: 24px;
+    padding-block: 28px;
+  }
+}
+@media (max-width: 380px) {
+  .hero .hero-signal .art-label {
+    font-size: 9px;
+    padding-inline: 5px;
+    gap: 3px;
+  }
+}

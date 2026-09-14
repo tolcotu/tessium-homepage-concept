@@ -29,7 +29,7 @@ A homepage presentation concept for tessium.dev. Build the story around many on-
 
 ## Interaction and motion
 
-Only actual controls and links get hover affordances. Use native scrolling; no scroll hijacking. GSAP draws the pipeline and gently translates the signature artwork with scrolling. CSS motion is limited to signal pulses and demonstration events. Respect prefers-reduced-motion automatically; no user-facing motion controls. JSON previews stop updating while being read. Mobile removes spatial complexity while retaining content and functionality. Keyboard navigation, visible focus, copy feedback, and accessible disclosure menus.
+Only actual controls and links get hover affordances. Use native scrolling; no scroll hijacking. GSAP draws the pipeline and reveals the hero composition as one unit. The sculpture stays fixed relative to its annotations while signal pulses travel through it. Respect prefers-reduced-motion automatically; no user-facing motion controls. JSON previews stop updating while being read. Mobile removes spatial complexity while retaining content and functionality. Keyboard navigation, visible focus, copy feedback, and accessible disclosure menus.
 
 ## Sources and claim boundaries
 
@@ -49,3 +49,9 @@ Reviewed 2026-09-13: https://tessium.dev/, /pricing, /solutions, /docs/quickstar
 Generated with the built-in image tool, using the original mark as geometry reference. Exact request: an ultra-refined wide cinematic sculpture of the three converging logo streams, made from fine silver filaments, graphite ribbons, and restrained pale lavender edges, against black, with no typography or UI. File: public/assets/signal-sculpture.png. The tool does not expose an image-model selector.
 
 Hero keeps its original contain composition and light edge mask. The opaque source raster uses lighten blending against an isolated graphite backdrop, with a mild black-point correction, so its darker background disappears without recropping the sculpture. Annotations use the existing surface, border, and silver text tokens in static pills. The closing visual is a separate SVG component, not a reuse of this raster.
+
+## Composition polish — September 14
+
+Preserve the graphite, silver, and violet palette and existing Manrope/Geist typography. Keep the sculpture as the signature visual: slightly quieter headline sizing, a consistent 24–28px rhythm around supporting copy and actions, and 120px desktop section spacing. Align card copy to the same inset and use 48px between section introductions and content.
+
+Desktop hero layout: three source pills → three filament branches → one output pill. Place labels on a shared 1984:793 canvas, aligned to branch entrances with short, quiet leader lines. Do not independently translate the image on scroll. On phones, place the three input labels in a row above the sculpture and the output below its right side; retain legibility without covering the image. These changes refine the approved composition rather than introduce another visual motif.

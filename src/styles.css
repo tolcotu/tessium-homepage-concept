@@ -505,8 +505,8 @@ h3 {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 70px;
-  margin-bottom: 55px;
+  gap: 56px;
+  margin-bottom: 48px;
 }
 .section-kicker {
   font-size: 12px;
@@ -515,11 +515,11 @@ h3 {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
 }
 .section-intro > p {
   font-size: 15px;
-  line-height: 1.9;
+  line-height: 1.75;
   color: var(--muted);
   max-width: 330px;
   padding-bottom: 4px;
@@ -1118,7 +1118,7 @@ h3 {
   align-items: center;
 }
 .outcome-wide > div:last-child {
-  padding-left: 20px;
+  padding-left: 0;
   order: -1;
 }
 .outcome-wide h3 {
