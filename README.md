@@ -1,6 +1,6 @@
 # Tessium — Follow the signal
 
-A responsive homepage redesign for [tessium.dev](https://tessium.dev), built with React, TypeScript, Vite, GSAP, and Lucide. Original Tessium logo assets are preserved. Custom generated artwork extends the mark into silver data filaments; native SVG traces, diagrams, and chart artwork provide motion.
+A responsive public website redesign for [tessium.dev](https://tessium.dev), built with React, TypeScript, Vite, GSAP, and Lucide. Original Tessium logo assets are preserved. A native SVG extends the mark into monochrome data filaments, with identical geometry on every screen.
 
 [View the hosted concept](https://tolcotu.github.io/tessium-homepage-concept/)
 
@@ -25,15 +25,17 @@ npm run preview
 - Copyable TypeScript and Python quickstart examples.
 - GSAP scroll animation, native SVG signal pulses, and operating-system reduced-motion support.
 - Responsive navigation, keyboard-operated tabs, visible focus, and a skip link.
-- Signup, documentation, pricing, and company links point to the real Tessium website.
+- Public designs for streams, pricing, solutions, coverage, about, journal, article overviews, contact, terms, and privacy.
+- Monthly/yearly pricing, comparison table, FAQs, venue search, journal filters, and a validated email-draft contact flow.
+- Signup and documentation stay on the real Tessium website.
 
 ## Presentation boundaries
 
-This is a homepage design concept. Example events, charts, and diagrams are illustrative; no production WebSocket connection or API key is used. JSON field shapes follow the published documentation, while example addresses are abbreviated. Authentication, billing, and additional site pages remain at tessium.dev. The prototype is marked noindex.
+This is a public website design concept. Example events, charts, and diagrams are illustrative; no production WebSocket connection or API key is used. JSON field shapes follow the published documentation, while example addresses are abbreviated. Authentication, billing, and documentation remain at tessium.dev. Article and legal layouts contain clearly marked short overviews with links to the complete official text. The contact page prepares an email draft and does not submit to a backend. The prototype is marked noindex.
 
-Published pricing and latency figures were reviewed on 13 September 2026. Free traffic is limited to 20 GB/month; unlimited traffic applies to paid plans. Replay availability depends on plan. See [the design notes](docs/design.md) for sources and rationale.
+Pricing and coverage were checked again on 3 October 2026; homepage latency figures were reviewed on 13 September 2026. Free traffic is limited to 20 GB/month; unlimited traffic applies to paid plans. Replay availability depends on plan. See [the design notes](docs/design.md) for sources and rationale.
 
-The silver sculpture was created using the built-in image generator with Tessium's original mark as a geometry reference. The tool did not expose a specific image-model selector. Its project file is `public/assets/signal-sculpture.png`.
+The former generated sculpture remains in the repository as a reference, but is not rendered. `SignalMark.tsx` draws the current hero entirely in SVG. Public pages use `?page=pricing` style URLs so direct links and refreshes work on GitHub Pages without server rewrites.
 
 ## Verification
 
@@ -52,3 +54,7 @@ The silver sculpture was created using the built-in image generator with Tessium
 - `src/components/Quickstart.tsx`: developer code examples.
 - `src/styles.css`: responsive visual system.
 - `docs/design.md`: design direction and content provenance.
+
+## October 3 revision
+
+The palette contains only neutral grays, black, and white; colors are converted at the source rather than filtered over the page. See `src/PublicPages.tsx`, `src/public-pages.css`, and `src/routing.ts` for public-page designs.

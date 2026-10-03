@@ -51,9 +51,9 @@
   line-height: 1.4;
   padding: 8px 12px;
   white-space: nowrap;
-  background: #101115e6;
+  background: #111111e6;
   border-color: #ffffff16;
-  color: #c4c2cb;
+  color: #c3c3c3;
   transform: translateY(-50%);
 }
 .hero-signal .art-label::after {
@@ -63,7 +63,7 @@
   height: 1px;
   left: 100%;
   top: 50%;
-  background: linear-gradient(90deg, #b8a3ed42, #b8a3ed08);
+  background: linear-gradient(90deg, #adadad42, #adadad08);
 }
 .hero-signal .label-launches {
   top: 12%;
@@ -85,13 +85,13 @@
   top: 47.6%;
   left: 84%;
   right: auto;
-  color: #d5c6ee;
-  border-color: #b8a3ed30;
+  color: #cccccc;
+  border-color: #adadad30;
 }
 .hero-signal .label-output::after {
   left: auto;
   right: 100%;
-  background: linear-gradient(90deg, #b8a3ed08, #b8a3ed42);
+  background: linear-gradient(90deg, #adadad08, #adadad42);
 }
 .hero-artwork .artwork-caption {
   bottom: 0;

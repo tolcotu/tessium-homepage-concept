@@ -5,6 +5,7 @@ import "@fontsource/geist-mono/400.css";
 import App from "./App";
 import "./styles.css";
 import "./polish.css";
+import "./public-pages.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

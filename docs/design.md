@@ -55,3 +55,11 @@ Hero keeps its original contain composition and light edge mask. The opaque sour
 Preserve the graphite, silver, and violet palette and existing Manrope/Geist typography. Keep the sculpture as the signature visual: slightly quieter headline sizing, a consistent 24–28px rhythm around supporting copy and actions, and 120px desktop section spacing. Align card copy to the same inset and use 48px between section introductions and content.
 
 Desktop hero layout: three source pills → three filament branches → one output pill. Place labels on a shared 1984:793 canvas, aligned to branch entrances with short, quiet leader lines. Do not independently translate the image on scroll. On phones, place the three input labels in a row above the sculpture and the output below its right side; retain legibility without covering the image. These changes refine the approved composition rather than introduce another visual motif.
+
+## October 3 — monochrome public website
+
+This revision supersedes the violet palette and raster-art direction above. Use black #000000, white #ffffff, raised surfaces #101010, secondary text #a3a3a3, and white borders at 10–18% opacity. Preserve Manrope for text and Geist Mono for code. Native SVG filaments share one 1000:440 viewBox at every size; the readable HTML legend sits below the illustration and wraps on phones. The closing section uses a quiet signal rule and a typographic CTA instead of a perspective grid or glow.
+
+Public pages: streams, pricing, solutions, coverage, about, journal, six article overview layouts, contact, terms, and privacy. Pricing uses a comparison layout; coverage is an interactive directory; journal uses editorial cards; legal uses a contents column and readable text measure. Query-based routes support direct GitHub Pages links and refreshes. Documentation, account access, and checkout are outside this design scope.
+
+Sources rechecked October 3: https://tessium.dev/pricing, /solutions, /coverage, /about, /blog, /contact, /terms, /privacy. Venue names/slugs and monthly capacities reflect published pages. Annual totals apply the published two-month discount (ten monthly prices). Legal text is explicitly a short overview, not replacement terms. Article overviews link to each published original. The contact form only prepares a mailto draft, with native email and required-message validation.

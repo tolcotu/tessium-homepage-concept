@@ -9,80 +9,6 @@ import {
 
 const asset = (name: string) => `${import.meta.env.BASE_URL}assets/${name}`;
 
-export function SignalHorizon() {
-  return (
-    <svg
-      className="signal-horizon"
-      viewBox="0 0 1600 640"
-      fill="none"
-      aria-hidden="true"
-    >
-      <defs>
-        <linearGradient id="horizonStroke" x1="0" y1="0" x2="0" y2="1">
-          <stop stopColor="#b8a3ed" stopOpacity=".7" />
-          <stop offset="1" stopColor="#b8a3ed" stopOpacity="0" />
-        </linearGradient>
-        <radialGradient id="horizonGlow">
-          <stop stopColor="#b8a3ed" stopOpacity=".22" />
-          <stop offset="1" stopColor="#b8a3ed" stopOpacity="0" />
-        </radialGradient>
-        <radialGradient id="beaconGlow">
-          <stop stopColor="#b8a3ed" stopOpacity=".42" />
-          <stop offset=".38" stopColor="#b8a3ed" stopOpacity=".13" />
-          <stop offset="1" stopColor="#b8a3ed" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <ellipse cx="800" cy="300" rx="390" ry="125" fill="url(#horizonGlow)" />
-      {Array.from({ length: 17 }, (_, i) => {
-        const x = 40 + i * 95;
-        const distance = Math.abs(i - 8) / 8;
-        return (
-          <path
-            key={i}
-            d={`M${x} 650 C${x} 470 ${800 + (x - 800) * 0.08} 420 800 300`}
-            stroke="url(#horizonStroke)"
-            strokeWidth={distance < 0.26 ? 1 : 0.7}
-            opacity={0.42 + (1 - distance) * 0.46}
-            vectorEffect="non-scaling-stroke"
-          />
-        );
-      })}
-      {[470, 570].map((y) => (
-        <path
-          key={y}
-          d={`M40 ${y} Q800 ${y - (y - 300) * 0.3} 1560 ${y}`}
-          stroke="#b8a3ed"
-          strokeOpacity=".08"
-          vectorEffect="non-scaling-stroke"
-        />
-      ))}
-      <path
-        className="horizon-trail"
-        d="M230 650 C360 480 730 470 800 300"
-        pathLength="100"
-        stroke="#b8a3ed"
-        strokeWidth="2"
-      />
-      <path
-        className="horizon-trail horizon-trail-secondary"
-        d="M1370 650 C1240 480 870 470 800 300"
-        pathLength="100"
-        stroke="#b8a3ed"
-        strokeWidth="1.5"
-      />
-      <circle
-        className="horizon-beacon"
-        cx="800"
-        cy="300"
-        r="72"
-        fill="url(#beaconGlow)"
-      />
-      <circle cx="800" cy="300" r="3" fill="#f4f3f7" />
-      <path d="M752 300H784M816 300H848" stroke="#b8a3ed" strokeOpacity=".42" />
-    </svg>
-  );
-}
-
 export function Pipeline() {
   return (
     <div
@@ -102,9 +28,9 @@ export function Pipeline() {
       >
         <defs>
           <linearGradient id="pipeGradient">
-            <stop stopColor="#44434e" />
-            <stop offset=".55" stopColor="#b8a3ed" />
-            <stop offset="1" stopColor="#817492" />
+            <stop stopColor="#444444" />
+            <stop offset=".55" stopColor="#adadad" />
+            <stop offset="1" stopColor="#797979" />
           </linearGradient>
           <filter id="lineGlow">
             <feGaussianBlur stdDeviation="2" />
@@ -125,7 +51,7 @@ export function Pipeline() {
               className="moving-signal"
               style={{ animationDelay: `${i * -1.8}s` }}
               d={`M168 ${y}H230C340 ${y} 382 181 511 181`}
-              stroke="#d4c4fa"
+              stroke="#cbcbcb"
               strokeWidth="2"
               strokeDasharray="14 600"
             />
@@ -143,15 +69,15 @@ export function Pipeline() {
         <path
           className="moving-signal output-signal"
           d="M609 181C710 181 815 181 958 181"
-          stroke="#d4c4fa"
+          stroke="#cbcbcb"
           strokeWidth="2"
           strokeDasharray="22 600"
         />
         {[72, 181, 290].map((y) => (
-          <circle key={`source-${y}`} cx="168" cy={y} r="2.5" fill="#b8a3ed" />
+          <circle key={`source-${y}`} cx="168" cy={y} r="2.5" fill="#adadad" />
         ))}
-        <circle cx="958" cy="181" r="2.5" fill="#b8a3ed" />
-        <path d="M790 171L800 181L790 191" stroke="#a697bb" />
+        <circle cx="958" cy="181" r="2.5" fill="#adadad" />
+        <path d="M790 171L800 181L790 191" stroke="#9d9d9d" />
       </svg>
       <div className="pipeline-sources">
         <div>
@@ -192,8 +118,8 @@ export function OutcomeArt({ type }: { type: "chart" | "alerts" | "wallet" }) {
         <svg viewBox="0 0 460 160" fill="none">
           <defs>
             <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-              <stop stopColor="#b8a3ed" stopOpacity=".13" />
-              <stop offset="1" stopColor="#b8a3ed" stopOpacity="0" />
+              <stop stopColor="#adadad" stopOpacity=".13" />
+              <stop offset="1" stopColor="#adadad" stopOpacity="0" />
             </linearGradient>
           </defs>
           {[35, 75, 115].map((y) => (
@@ -211,7 +137,7 @@ export function OutcomeArt({ type }: { type: "chart" | "alerts" | "wallet" }) {
           <path
             className="chart-line"
             d="M0 127L18 125L30 137L48 115L66 122L78 102L98 113L115 93L138 103L152 82L166 96L180 64L198 75L212 68L228 89L246 78L260 56L274 67L292 43L308 53L326 31L339 47L354 35L370 45L390 21L408 30L424 17L442 27L460 8"
-            stroke="#b8a3ed"
+            stroke="#adadad"
             strokeWidth="1.5"
           />
         </svg>
@@ -251,10 +177,10 @@ export function OutcomeArt({ type }: { type: "chart" | "alerts" | "wallet" }) {
       <svg viewBox="0 0 460 244" fill="none">
         <path
           d="M60 122H155Q190 122 205 86T280 50H420M60 122H420M60 122H155Q190 122 205 158T280 194H420"
-          stroke="#625973"
+          stroke="#5d5d5d"
         />
         {[50, 122, 194].map((y) => (
-          <circle key={y} r="3" cx="350" cy={y} fill="#c4b5e6" />
+          <circle key={y} r="3" cx="350" cy={y} fill="#bcbcbc" />
         ))}
       </svg>
       <div className="wallet-events">
@@ -288,7 +214,7 @@ export function RecoveryArt() {
         role="img"
         aria-label="Events resume after a brief connection drop"
       >
-        <path d="M20 70H190M300 70H500" stroke="#837391" />
+        <path d="M20 70H190M300 70H500" stroke="#797979" />
         {[40, 70, 100, 130, 160, 320, 350, 380, 410, 440, 470].map((x) => (
           <g key={x}>
             <rect
@@ -297,22 +223,22 @@ export function RecoveryArt() {
               width="10"
               height="28"
               rx="2"
-              stroke="#9c8db3"
-              fill="#141218"
+              stroke="#939393"
+              fill="#131313"
             />
           </g>
         ))}
         <path
           d="M190 70C205 70 205 118 245 118S285 70 300 70"
-          stroke="#b8a3ed"
+          stroke="#adadad"
           strokeDasharray="3 5"
         />
-        <path d="M190 70H300" stroke="#615564" strokeDasharray="2 5" />
+        <path d="M190 70H300" stroke="#595959" strokeDasharray="2 5" />
         <text
           x="245"
           y="43"
           textAnchor="middle"
-          fill="#96939f"
+          fill="#959595"
           fontSize="11"
           fontFamily="Geist Mono"
         >
@@ -322,7 +248,7 @@ export function RecoveryArt() {
           x="245"
           y="146"
           textAnchor="middle"
-          fill="#c3b0e7"
+          fill="#b8b8b8"
           fontSize="11"
           fontFamily="Geist Mono"
         >
